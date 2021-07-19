@@ -1,0 +1,50 @@
+type Query {
+    getGood(goodId: ID!): Good!
+    getGoods: [Good!]!
+    getGoodsOnCategory(categoryId: ID!): [Good!]!
+    getUser(id: ID!): User!
+    getUsers: [User!]!
+}
+
+type Mutation {
+    addGood(
+        name: String!
+        categoryId: ID!
+        description: String
+    ): Good!
+    addOrder(
+        userId: ID!
+        goodIds: [ID!]!
+    ): Order!
+}
+
+type Category {
+    id: ID!
+    name: String!
+    goodIds: [Good!]!
+}
+
+type Good {
+    id: ID!
+    name: String!
+    categoryId: Category!
+    description: String
+}
+
+type User {
+    id: ID!
+    name: String!
+    email: String!
+    orderIds: [Order!]!
+}
+
+type Order {
+    id: ID!
+    buyer: User!
+    goodIds: [Good!]!
+}
+
+
+
+
+
