@@ -1,0 +1,54 @@
+{
+  "categories": [
+    {
+      "id": "1",
+      "name": "Clean water"
+    },
+    {
+      "id": "2",
+      "name": "Water with vitamins"
+    },
+    {
+      "id": "3",
+      "name": "Soda"
+    }
+  ],
+
+  "goods": [
+    {
+      "id": "1",
+      "name": "Bottled Water",
+      "description": "Bottled Water Delivery",
+      "categoryId": "1"
+    },
+    {
+      "id": "2",
+      "name": "Water with vitamin C",
+      "description": "Electrolit Instant hydration",
+      "categoryId": "2"
+    },
+    {
+      "id": "3",
+      "name": "Coca-cola",
+      "description": "Custom Coke Bottles & Coca-Cola Collectibles",
+      "categoryId": "3"
+    }
+  ],
+
+  "users": [
+    {
+      "id": "1",
+      "name": "kOBRA",
+      "email": "kOBRA@mail.com"
+    }
+  ],
+
+  "orders": [
+    {
+      "id": "1",
+      "userId": "1",
+      "goodIds": ["1", "2", "3"]
+    }
+  ]
+
+}

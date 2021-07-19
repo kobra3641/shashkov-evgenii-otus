@@ -1,0 +1,14 @@
+{
+  "name": "node-7",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "nodemon -e js,json,graphql"
+  },
+  "dependencies": {
+    "graphql": "^15.5.1",
+    "nodemon": "^2.0.12"
+  },
+  "devDependencies": {
+    "apollo-server": "^3.0.1"
+  }
+}
