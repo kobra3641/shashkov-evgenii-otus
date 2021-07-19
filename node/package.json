@@ -1,0 +1,8 @@
+{
+  "name": "node-6",
+  "version": "1.0.0",
+  "dependencies": {
+    "async": "^3.2.0",
+    "multistream": "^4.1.0"
+  }
+}
