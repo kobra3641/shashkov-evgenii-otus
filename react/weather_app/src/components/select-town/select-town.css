@@ -1,0 +1,12 @@
+.select {
+    border: 1px solid #66A3D2;
+    border-radius: 0.5rem;
+}
+
+.red-heart {
+    color: #FD3F49;
+}
+
+.red-heart:hover {
+    cursor: pointer;
+}
