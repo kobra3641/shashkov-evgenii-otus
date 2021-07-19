@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "town": "Moscow",
+    "weather": {
+      "temp": "-10",
+      "overcast": "cloud-sun",
+      "wind": 3,
+      "humidity": 75
+    }
+  },
+  {
+    "id": 2,
+    "town": "St. Petersburg",
+    "weather": {
+      "temp": "+15",
+      "overcast": "sun",
+      "wind": 1,
+      "humidity": 80
+    }
+  },
+  {
+    "id": 3,
+    "town": "Yekaterinburg",
+    "weather": {
+      "temp": "+2",
+      "overcast": "cloud-sun-rain",
+      "wind": 5,
+      "humidity": 90
+    }
+  },
+  {
+    "id": 4,
+    "town": "Samara",
+    "weather": {
+      "temp": "+9",
+      "overcast": "cloud-showers-heavy",
+      "wind": 7,
+      "humidity": 85
+    }
+  }
+]

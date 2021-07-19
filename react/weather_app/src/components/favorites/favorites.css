@@ -1,0 +1,7 @@
+.times {
+    color: black;
+}
+
+.times:hover {
+    cursor: pointer;
+}
