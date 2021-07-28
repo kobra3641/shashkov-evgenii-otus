@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <form class="form m-2">
+      <mat-form-field class="mat-form-field full-width my-2">
+        <mat-label>Выберите язык перевода</mat-label>
+        <mat-select [value]="selectedLanguage?.value"
+                    (valueChange)="changeLanguage($event)">
+          <mat-option *ngFor="let lang of storageService.languages"
+                      [value]="lang.value" >
+            {{lang.displayName}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="mat-form-field full-width" appearance="fill" >
+        <textarea class="w-100"
+                  matInput type="text"
+                  placeholder="Текст для перевода"
+                  [(ngModel)]="textToTranslate"
+                  [ngModelOptions]="{standalone: true}">
+        </textarea>
+      </mat-form-field>
+      <button class="w-100 my-2"
+              [disabled]="!textToTranslate"
+              mat-raised-button
+              color="primary"
+              (click)="translateWord()">
+        Перевести
+      </button>
+      <mat-form-field class="mat-form-field full-width" appearance="fill">
+        <textarea class="w-100"
+                  readonly
+                  matInput
+                  placeholder="Перевод"
+                  [(ngModel)]="textFromTranslate"
+                  [ngModelOptions]="{standalone: true}">
+        </textarea>
+      </mat-form-field>
+    </form>
+    <mat-list class="form form-border" *ngIf="words.length > 0">
+      <div mat-subheader>Список добавленных слов</div>
+      <mat-list-item *ngFor="let word of words">
+        <div mat-line>
+          {{'Слово: ' + word.to + '; Перевод: ' + word.from + '; Язык перевода: ' + getDisplayLanguage(word.langPair)}}
+        </div>
+        <div mat-line>
+          <hr/>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </div>
+
+</div>
