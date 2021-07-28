@@ -1,0 +1,16 @@
+<div class="container">
+<mat-sidenav-container>
+  <mat-sidenav mode="side" opened style="background-color: #673ab7">
+    <mat-nav-list fxLayout="row" >
+      <a mat-list-item style="color: white" *ngFor="let link of navLinks"
+        [routerLink]="link.path"
+         routerLinkActive>
+        {{link.label}}
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content style="min-height: 200px">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+</div>
