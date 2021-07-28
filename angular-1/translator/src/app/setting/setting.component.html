@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <form class="form m-2">
+      <mat-form-field class="mat-form-field full-width my-2">
+        <mat-label>Выберите язык</mat-label>
+        <mat-select [value]="selectedLanguage?.value"
+                    (valueChange)="changeLanguage($event)">
+          <mat-option *ngFor="let lang of storageService.languages"
+                      [value]="lang.value" >
+            {{lang.displayName}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="mat-form-field full-width my-2">
+        <mat-label>Выберите количество слов</mat-label>
+        <mat-select [(value)]="selectedCounter">
+          <mat-option *ngFor="let count of counter"
+                      [value]="count">
+            {{count}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="mat-form-field full-width my-2" appearance="fill">
+        <mat-label>Выберите время выполнения упражнения (минуты)</mat-label>
+        <input matInput
+               type="number"
+               min="1"
+               max="100"
+               [(ngModel)]="selectedTime"
+               [ngModelOptions]="{standalone: true}">
+      </mat-form-field>
+      <button class="w-100 my-2"
+              mat-raised-button
+              color="primary"
+              type='button'
+              (click)="saveSetting()">
+        Сохранить
+      </button>
+      <button class="w-100 my-2"
+              mat-raised-button
+              color="primary"
+              type='button'
+              (click)="clearWordStorage()">
+        Очистить список добавленных слов
+      </button>
+    </form>
+  </div>
+</div>
