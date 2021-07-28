@@ -1,0 +1,19 @@
+<div class="container">
+  <mat-tab-group mat-align-tabs="center">
+    <mat-tab label="Добавить слово">
+      <ng-template matTabContent>
+        <app-recently-added></app-recently-added>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="Тренировка">
+      <ng-template matTabContent>
+        <app-go></app-go>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="Настройки">
+      <ng-template matTabContent>
+        <app-setting></app-setting>
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
+</div>
